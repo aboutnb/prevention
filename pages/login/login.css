@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+}
+.container .textArea {
+  width: 90%;
+  height: 50vh;
+  align-items: center;
+  margin: auto;
+}
+.container .textArea .at-input {
+  margin: 20px;
+}
+.container .textArea .buttonArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container .textArea .buttonArea .at-btn {
+  margin: 50px;
+}
