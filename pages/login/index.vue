@@ -2,7 +2,7 @@
  * @Author: XiaoBo
  * @Date: 2022-03-22 13:01:40
  * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-22 16:23:00
+ * @LastEditTime: 2022-03-22 16:38:33
  * @FilePath: \prevention\pages\login\index.vue
  * @Description: 登录注册页面
  * aboutnanbo@163.com
@@ -37,6 +37,7 @@ export default {
             let regName = /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
             // 8-20 位，字母、数字、英文特殊字符
             let regPwd = /^[A-Za-z0-9!@#$%^&*\\\\(\\\\)?><\":/.,';{}]{7,20}$/;
+            console.info({ username: this.userName, password: this.password });
         },
     }
 };
