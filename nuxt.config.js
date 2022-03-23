@@ -1,10 +1,10 @@
 /*
  * @Author: your name
  * @Date: 2022-03-22 10:58:54
- * @LastEditTime: 2022-03-22 12:58:54
- * @LastEditors: Please set LastEditors
+* @LastEditTime: 2022-03-23 11:41:51
+* @LastEditors: XiaoBo
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: \prevention\nuxt.config.js
+* @FilePath: \prevention\nuxt.config.js
  */
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -18,7 +18,7 @@ export default {
     },
     meta: [{
         charset: 'utf-8'
-      },  
+      },
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
@@ -70,7 +70,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: 'http://123.60.76.18:8080/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

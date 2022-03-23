@@ -2,7 +2,7 @@
  * @Author: XiaoBo
  * @Date: 2022-03-22 13:01:40
  * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-22 16:38:33
+ * @LastEditTime: 2022-03-23 11:52:32
  * @FilePath: \prevention\pages\login\index.vue
  * @Description: 登录注册页面
  * aboutnanbo@163.com
@@ -37,7 +37,37 @@ export default {
             let regName = /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
             // 8-20 位，字母、数字、英文特殊字符
             let regPwd = /^[A-Za-z0-9!@#$%^&*\\\\(\\\\)?><\":/.,';{}]{7,20}$/;
-            console.info({ username: this.userName, password: this.password });
+            // 判断账号密码是否为空并验证格式
+            // if (this.userName == null || this.password == null) {
+            //     this.$message.warning("账号或密码不能为空");
+            //     return;
+            // }
+            // if (!regName.test(this.userName)) {
+            //     this.$message.warning("账号格式不正确");
+            //     return;
+            // }
+            // if (!regPwd.test(this.password)) {
+            //     this.$message.warning("密码格式不正确");
+            //     return;
+            // }
+            // 发送Axios请求
+            this.$axios("/login", {
+                method: "post",
+                data: {
+                    username: this.userName,
+                    password: this.password,
+                }
+            }).then(res => {
+                console.log(res);
+                // if (res.data.code == 200) {
+                //     this.$message.success("登录成功");
+                //     this.$router.push("/home");
+                // } else {
+                //     this.$message.error(res.data.msg);
+                // }
+            }).catch(err => {
+                // this.$message.error("登录失败");
+            });
         },
     }
 };
