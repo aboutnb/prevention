@@ -2,7 +2,7 @@
  * @Author: XiaoBo
  * @Date: 2022-03-22 13:01:40
  * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-23 22:19:28
+ * @LastEditTime: 2022-03-23 23:17:23
  * @FilePath: \prevention\pages\login\index.vue
  * @Description: 登录注册页面
  * aboutnanbo@163.com
@@ -64,15 +64,16 @@ export default {
                     localStorage.setItem("token", JSON.stringify(res.data.token));
                     localStorage.setItem("user_name", JSON.stringify(res.data.user_name));
                     console.log(res.data.msg);
-                    this.$router.push("/home");
                     setTimeout(() => {
-                        this.$message.success(res.data.msg);
-                    }, 500);
+                        this.$router.push("/home");
+                    }, 1000);
+                    this.$Message.success(res.data.msg);
+
                 } else {
-                    this.$message.error(res.data.msg);
+                    this.$Message.error(res.data.msg);
                 }
             }).catch(err => {
-                this.$message.error("登录失败");
+                this.$Message.error("登录失败");
             });
         },
     }

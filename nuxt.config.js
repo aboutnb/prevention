@@ -1,10 +1,10 @@
 /*
  * @Author: your name
  * @Date: 2022-03-22 10:58:54
-* @LastEditTime: 2022-03-23 11:41:51
-* @LastEditors: XiaoBo
+ * @LastEditTime: 2022-03-23 23:04:38
+ * @LastEditors: XiaoBo
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-* @FilePath: \prevention\nuxt.config.js
+ * @FilePath: \prevention\nuxt.config.js
  */
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -52,7 +52,11 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/at-ui"],
+  plugins: [{
+      src: '~/plugins/at-ui.js',
+    },
+    // "@/plugins/at-ui"
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
