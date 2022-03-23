@@ -2,7 +2,7 @@
  * @Author: XiaoBo
  * @Date: 2022-03-22 13:01:40
  * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-23 11:52:32
+ * @LastEditTime: 2022-03-23 22:19:28
  * @FilePath: \prevention\pages\login\index.vue
  * @Description: 登录注册页面
  * aboutnanbo@163.com
@@ -59,14 +59,20 @@ export default {
                 }
             }).then(res => {
                 console.log(res);
-                // if (res.data.code == 200) {
-                //     this.$message.success("登录成功");
-                //     this.$router.push("/home");
-                // } else {
-                //     this.$message.error(res.data.msg);
-                // }
+                if (res.status == 200) {
+                    // 存储用户信息到localStorage
+                    localStorage.setItem("token", JSON.stringify(res.data.token));
+                    localStorage.setItem("user_name", JSON.stringify(res.data.user_name));
+                    console.log(res.data.msg);
+                    this.$router.push("/home");
+                    setTimeout(() => {
+                        this.$message.success(res.data.msg);
+                    }, 500);
+                } else {
+                    this.$message.error(res.data.msg);
+                }
             }).catch(err => {
-                // this.$message.error("登录失败");
+                this.$message.error("登录失败");
             });
         },
     }
