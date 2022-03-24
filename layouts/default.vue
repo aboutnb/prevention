@@ -2,7 +2,7 @@
  * @Author: XiaoBo
  * @Date: 2022-03-23 10:29:18
  * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-23 10:42:02
+ * @LastEditTime: 2022-03-24 11:35:05
  * @FilePath: \prevention\layouts\default.vue
  * @Description: layout默认布局
  * aboutnanbo@163.com
@@ -55,9 +55,11 @@ export default {
 .container {
     .tabBar {
         position: fixed;
+        left: 0;
+        right: 0;
         bottom: 0;
         width: 100%;
-        height: 10vh;
+        height: 8vh;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
@@ -66,8 +68,8 @@ export default {
         align-items: center;
         border-top: 1px solid #ccc;
         img {
-            width: 5vh;
-            height: 5vh;
+            width: 2rem;
+            height: 2rem;
         }
         .tabOne {
             grid-area: tabOne;
