@@ -1,9 +1,9 @@
 /*
  * @Author: XiaoBo
  * @Date: 2022-03-24 13:58:35
-* @LastEditors: XiaoBo
-* @LastEditTime: 2022-03-24 14:33:13
-* @FilePath: \prevention\middleware\auth.js
+ * @LastEditors: XiaoBo
+ * @LastEditTime: 2022-03-24 15:00:39
+ * @FilePath: \prevention\middleware\auth.ts
  * @Description: 
  * @aboutnanbo@163.com
  */

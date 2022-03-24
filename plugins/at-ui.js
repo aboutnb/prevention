@@ -1,9 +1,9 @@
 /*
  * @Author: XiaoBo
  * @Date: 2022-03-22 11:50:21
-* @LastEditors: XiaoBo
-* @LastEditTime: 2022-03-23 23:08:18
-* @FilePath: \prevention\plugins\at-ui.js
+ * @LastEditors: XiaoBo
+ * @LastEditTime: 2022-03-24 15:02:28
+ * @FilePath: \prevention\plugins\at-ui.ts
  * @Description: 
  * @aboutnanbo@163.com
  */
@@ -17,7 +17,7 @@ import {
   LoadingBar,
   Dialog,
 } from 'at-ui'
-const Components = [Button, Input, ];
+const Components = [Button, Input,];
 import zhLocale from 'at-ui/dist/locale/zh-CN'
 const AtUI = {
   install(Vue) {

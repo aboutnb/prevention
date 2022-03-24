@@ -1,10 +1,10 @@
 /*
  * @Author: your name
  * @Date: 2022-03-22 10:58:54
- * @LastEditTime: 2022-03-23 23:04:38
- * @LastEditors: XiaoBo
+* @LastEditTime: 2022-03-24 15:04:03
+* @LastEditors: XiaoBo
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: \prevention\nuxt.config.js
+* @FilePath: \prevention\nuxt.config.js
  */
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
