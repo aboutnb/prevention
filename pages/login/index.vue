@@ -2,7 +2,7 @@
  * @Author: XiaoBo
  * @Date: 2022-03-22 13:01:40
  * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-23 23:17:23
+ * @LastEditTime: 2022-03-24 11:05:01
  * @FilePath: \prevention\pages\login\index.vue
  * @Description: 登录注册页面
  * aboutnanbo@163.com
@@ -60,15 +60,20 @@ export default {
             }).then(res => {
                 console.log(res);
                 if (res.status == 200) {
+                    // 存储用户信息到vuex
+                    this.$store.commit("userInfo", res.data);
                     // 存储用户信息到localStorage
                     localStorage.setItem("token", JSON.stringify(res.data.token));
                     localStorage.setItem("user_name", JSON.stringify(res.data.user_name));
+                    // 设置cookie 时间为48小时
+                    this.$cookie.set("token", res.data.token, {
+                        expires: 48
+                    });
                     console.log(res.data.msg);
                     setTimeout(() => {
                         this.$router.push("/home");
                     }, 1000);
                     this.$Message.success(res.data.msg);
-
                 } else {
                     this.$Message.error(res.data.msg);
                 }
