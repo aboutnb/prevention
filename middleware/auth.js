@@ -1,9 +1,9 @@
 /*
  * @Author: XiaoBo
  * @Date: 2022-03-24 13:58:35
- * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-24 14:19:11
- * @FilePath: \prevention\middleware\auth.js
+* @LastEditors: XiaoBo
+* @LastEditTime: 2022-03-24 14:33:13
+* @FilePath: \prevention\middleware\auth.js
  * @Description: 
  * @aboutnanbo@163.com
  */
@@ -36,7 +36,7 @@ export default function ({
   // 判断是否获取到token
   // 未获取到，重定向到登陆页面
   if (!token) {
-    $nuxt.$Message.success("您尚未登录账户，请登录！");
+    $nuxt.$Message.warning("您尚未登录账户，请登录！");
     setTimeout(() => {
       redirect(redirectURL)
     }, 1000);
