@@ -1,10 +1,10 @@
 /*
  * @Author: your name
  * @Date: 2022-03-22 10:58:54
-* @LastEditTime: 2022-03-24 15:04:03
-* @LastEditors: XiaoBo
+ * @LastEditTime: 2022-03-28 21:38:45
+ * @LastEditors: XiaoBo
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-* @FilePath: \prevention\nuxt.config.js
+ * @FilePath: \prevention\nuxt.config.js
  */
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -14,7 +14,7 @@ export default {
   head: {
     title: 'prevention',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'zh-CN'
     },
     meta: [{
         charset: 'utf-8'
@@ -54,6 +54,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{
       src: '~/plugins/at-ui.js',
+    },
+    {
+      src: '~/plugins/vue-map.js',
     },
     // "@/plugins/at-ui"
   ],
