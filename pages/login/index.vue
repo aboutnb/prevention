@@ -2,7 +2,7 @@
  * @Author: XiaoBo
  * @Date: 2022-03-22 13:01:40
  * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-28 23:00:16
+ * @LastEditTime: 2022-03-28 23:12:54
  * @FilePath: \prevention\pages\login\index.vue
  * @Description: 登录注册页面
  * aboutnanbo@163.com
@@ -16,7 +16,7 @@
                 <at-button type="primary" @click="checkField">登录</at-button>
                 <at-button type="primary">注册</at-button>
             </div>
-            <nuxt-link :to="signin">进入签到</nuxt-link>
+            <nuxt-link to="signin">进入签到</nuxt-link>
         </div>
     </div>
 </template>
