@@ -2,7 +2,7 @@
  * @Author: XiaoBo
  * @Date: 2022-03-22 13:01:40
  * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-24 14:30:16
+ * @LastEditTime: 2022-03-28 23:00:16
  * @FilePath: \prevention\pages\login\index.vue
  * @Description: 登录注册页面
  * aboutnanbo@163.com
@@ -16,6 +16,7 @@
                 <at-button type="primary" @click="checkField">登录</at-button>
                 <at-button type="primary">注册</at-button>
             </div>
+            <nuxt-link :to="signin">进入签到</nuxt-link>
         </div>
     </div>
 </template>
@@ -34,6 +35,7 @@ export default {
     },
     methods: {
         checkField() {
+            // let _this = this;
             let regName = /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
             // 8-20 位，字母、数字、英文特殊字符
             let regPwd = /^[A-Za-z0-9!@#$%^&*\\\\(\\\\)?><\":/.,';{}]{7,20}$/;
@@ -75,7 +77,7 @@ export default {
                     let seconds = 3600;     // 过期时间 /秒
                     let expires = new Date(new Date() * 1 + seconds * 1000);
 
-                    console.log(res.data.msg);
+                    // console.log(res.data.msg);
                     setTimeout(() => {
                         this.$router.push("/home");
                     }, 1000);
@@ -83,10 +85,9 @@ export default {
                 } else {
                     this.$Message.error(res.data.msg);
                 }
-            })
-                .catch(err => {
-                    this.$Message.error("登录失败");
-                });
+            }).catch(err => {
+                this.$Message.error("登录失败");
+            });
         },
     }
 };

@@ -2,7 +2,7 @@
  * @Author: XiaoBo
  * @Date: 2022-03-23 10:29:18
  * @LastEditors: XiaoBo
- * @LastEditTime: 2022-03-24 11:35:05
+ * @LastEditTime: 2022-03-28 21:25:21
  * @FilePath: \prevention\layouts\default.vue
  * @Description: layout默认布局
  * aboutnanbo@163.com
@@ -67,6 +67,7 @@ export default {
         justify-items: center;
         align-items: center;
         border-top: 1px solid #ccc;
+        background-color: #fff;
         img {
             width: 2rem;
             height: 2rem;
